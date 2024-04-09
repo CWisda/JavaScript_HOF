@@ -4,9 +4,9 @@ console.log("Hello World!\n==========\n");
 console.log("EXERCISE 1:\n==========\n");
 
 
-function plus(nums) {
+function plus(num) {
     return function(plusNumber) {
-        return nums + plusNumber;
+        return num + plusNumber;
     };
 }
 const plus15 = plus(15);
@@ -111,4 +111,4 @@ let sumOfScores = users.reduce((sum, user) => sum + user.score, 0);
 let averageScore = sumOfScores / users.length;
 
 console.log("Sum of all scores:", sumOfScores);
-console.log("Average score:", averageScore);
+console.log("Average score:", averageScore);            
