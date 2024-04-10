@@ -100,6 +100,7 @@ console.log(hobbitArr);
  //re arrange the order of teh elements in the array 
  // it does so based on some provided criteria 
  // . sort will change the array directly
+ // outcomes: (-1, 0, 1)
 
  /*const sortHobbits = users.sort((element, index, arr) => {
    if (element.) {
