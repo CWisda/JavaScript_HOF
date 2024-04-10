@@ -59,6 +59,9 @@ function printHobbits(allTheHobbits) {
 }
 */
 
+// for each 
+// remember (element, index, array       )
+
 users.forEach((user) => {
   console.log(user.name);
 });
@@ -83,6 +86,8 @@ const hobbitArr = users.map(user => {
 console.log(hobbitArr);
 
 // .filter
+// look at each element and answer this question: Should we keep this element? (yes or no?)
+
  const filteredHobbits = users.filter((element, index, arr) => {
    if (element.isActive) {
      return true; //keep that in the resulting array
@@ -92,6 +97,9 @@ console.log(hobbitArr);
 
 
  // .sort 
+ //re arrange the order of teh elements in the array 
+ // it does so based on some provided criteria 
+ // . sort will change the array directly
 
  /*const sortHobbits = users.sort((element, index, arr) => {
    if (element.) {
@@ -100,13 +108,31 @@ console.log(hobbitArr);
  });
  console.log(sortHobbits);*/
 
- users.sort((a,b) => b.score - a.score);
+ users.sort((a,b) => {
+    return b.score - a.score
+ });
 console.log(users);
 
 
+//another way
+// if (a.score > b.score){
+    //return -1;
+//} else if (a.score < b.score){
+    //return 1;
+//} else {
+    //return 0;
+//} 
+
+ 
 
 // reduce exercise 
-let sumOfScores = users.reduce((sum, user) => sum + user.score, 0);
+// reduce - simplify all the information down to one single piece of info 
+// on every iteration, reduce will give you an accumulated value and the current iteration's element
+// reduce takes two values - two parameters (very common to give 0)
+// zero as the accumulator value
+//(accumulator, currentValue) - 
+let sumOfScores = users.reduce((sum, user) => {
+    return sum + user.score}, 0);
 
 let averageScore = sumOfScores / users.length;
 
